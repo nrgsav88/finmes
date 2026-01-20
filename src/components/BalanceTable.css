@@ -1,0 +1,84 @@
+/* BalanceTable.css */
+.balance-table thead tr {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+}
+
+
+
+.balance-table thead th {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+}
+
+
+
+.border-right {
+  border-right: 2px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.balance-table tbody .border-right {
+  border-right: 2px solid #e2e8f0 !important;
+}
+
+.divider-row td {
+  padding: 0 !important;
+  height: 3px;
+  background-color: #e5e7eb;
+  border: none !important;
+}
+
+.divider-row td::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: #9ca3af;
+  margin: 0 10px;
+  border-radius: 1px;
+}
+
+/* Стили для строки "Общий баланс" - увеличенные и более заметные */
+.balance-table .total-row {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
+  height: 60px !important;
+}
+
+.balance-table .total-row td {
+  background: transparent !important;
+  color: white !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  padding: 18px 12px !important;
+  border: none !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  vertical-align: middle !important;
+}
+
+.balance-table .total-row td:first-child {
+  font-size: 16px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.balance-table .total-row .total-value {
+  font-size: 16px !important;
+  font-weight: 900 !important;
+}
+
+/* Особые стили для ячеек сальдо в итоговой строке */
+.balance-table .total-row td:nth-child(8),
+.balance-table .total-row td:nth-child(9) {
+  font-size: 17px !important;
+  font-weight: 900 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 6px;
+  margin: 4px 2px;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+
+
+/* Увеличиваем отступы для лучшей читаемости */
+.balance-table tbody tr:last-child {
+  border-bottom: 3px solid #1e40af !important;
+}

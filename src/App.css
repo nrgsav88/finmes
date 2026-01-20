@@ -1,0 +1,878 @@
+/* Стили для заголовка */
+.App-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  padding: 20px 30px;
+  color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-center {
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* Кнопка Новый договор */
+.new-contract-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.new-contract-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Стили для пользователя */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Кнопки Войти/Выйти */
+.login-btn,
+.logout-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Стили для навигационных вкладок */
+.navigation-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-tab-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  min-width: 120px;
+}
+
+.nav-tab-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.nav-tab-button.active {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Стили для таблицы */
+.data-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(59, 130, 246, 0.15);
+  overflow: hidden;
+  border: none;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-bottom: none;
+}
+
+.table-header h2 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: 1px solid #3b82f6;
+  border-radius: 5px;
+  background: white;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.export-btn, .filter-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+}
+
+.export-btn:hover, .filter-btn:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+/* Полноширинная градиентная шапка таблицы */
+.data-table thead {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.data-table th {
+  background: transparent !important;
+  color: white !important;
+  padding: 20px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border: none !important;
+}
+
+/* Убираем все разделители */
+.data-table th,
+.data-table td {
+  border: none !important;
+}
+
+/* Легкие разделители только между ячейками */
+.data-table th:not(:last-child)::after,
+.data-table td:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.3) 80%,
+    transparent 100%);
+}
+
+.data-table td:not(:last-child)::after {
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(59, 130, 246, 0.2) 20%,
+    rgba(59, 130, 246, 0.2) 80%,
+    transparent 100%);
+}
+
+/* Убираем hover для шапки */
+.data-table th:hover {
+  background: transparent !important;
+}
+
+.data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f9ff;
+  color: black;
+  font-weight: 400;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.data-table tr {
+  transition: all 0.3s ease;
+}
+
+/* Зебра */
+.data-table tr:nth-child(even) {
+  background: #fafbff;
+}
+
+.data-table tr:nth-child(even):hover {
+  background: linear-gradient(135deg, #f5f7ff 0%, #edf2ff 100%);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.view-btn, .edit-btn {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.view-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+}
+
+.view-btn:hover {
+  background: #2563eb;
+}
+
+.edit-btn {
+  background: #1d4ed8;
+  color: white;
+  border: none;
+}
+
+.edit-btn:hover {
+  background: #1e40af;
+}
+
+.empty-state {
+  text-align: center;
+  color: #3b82f6;
+  font-style: italic;
+  padding: 40px;
+  background: #f0f9ff;
+  border-radius: 10px;
+  border: 2px dashed #3b82f6;
+}
+
+.loading {
+  text-align: center;
+  color: #3b82f6;
+  font-size: 18px;
+  margin: 50px 0;
+}
+
+.error {
+  background: #ef4444;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Стили для поиска в шапке таблицы */
+.search-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.column-label {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.search-input {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 13px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Стили для колонки с датами */
+.dates-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.date-start,
+.date-end {
+  white-space: nowrap;
+}
+
+.date-start {
+  color: black;
+  font-weight: 500;
+}
+
+.date-end {
+  color: black;
+  font-size: 11px;
+}
+
+/* Стили для счетчика результатов */
+.results-count {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+}
+
+/* Стили для сообщения о отсутствии результатов */
+.no-results {
+  font-size: 14px;
+  color: #a0aec0;
+  margin-top: 8px;
+}
+
+/* Стили для итоговой строки */
+.total-row {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  color: white;
+  font-weight: 700;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  box-shadow: 0 -3px 20px rgba(59, 130, 246, 0.4);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.total-row td {
+  background: transparent !important;
+  padding: 20px 16px;
+  font-size: 14px;
+  text-align: center;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: none !important;
+}
+
+/* Убираем все разделители у итоговой строки */
+.total-row td::after {
+  display: none !important;
+}
+
+.total-label {
+  font-weight: 800;
+  text-align: left !important;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white !important;
+}
+
+.total-value {
+  font-weight: 800;
+  font-size: 15px !important;
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Убираем разделитель у последней ячейки */
+.data-table th:last-child::after,
+.data-table td:last-child::after {
+  display: none;
+}
+
+/* Убираем hover эффект для итоговой строки */
+.total-row:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  transform: none !important;
+  box-shadow: 0 -3px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Убедимся, что итоговая строка всегда видна */
+.table-wrapper {
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Специфичные стили для ячеек с текстом в итоговой строке */
+.total-row .dates-column,
+.total-row .search-header {
+  background: transparent !important;
+  color: white !important;
+}
+
+.total-row .dates-column .date-start,
+.total-row .dates-column .date-end {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Переопределяем любые возможные фоны и цвета */
+.data-table tr.total-row td[style*="background"] {
+  background: transparent !important;
+}
+
+.data-table tr.total-row td[style*="color"] {
+  color: white !important;
+}
+
+/* Явно переопределяем все возможные цвета текста */
+.data-table tr.total-row td,
+.data-table tr.total-row td * {
+  color: white !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .data-table th {
+    padding: 16px 12px;
+    font-size: 12px;
+  }
+
+  .data-table th .search-input {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .total-row td {
+    padding: 16px 12px;
+    font-size: 13px;
+  }
+
+  .total-label {
+    font-size: 14px !important;
+    letter-spacing: 0.5px;
+  }
+
+  .total-value {
+    font-size: 13px !important;
+  }
+
+  .table-wrapper {
+    max-height: calc(100vh - 250px);
+  }
+}
+
+/* Стили для уведомления о БД */
+.db-init-notice {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border: 2px solid #f39c12;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(243, 156, 18, 0.2);
+}
+
+.db-init-notice p {
+  margin: 0 0 15px 0;
+  color: #e67e22;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.init-db-btn {
+  background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(243, 156, 18, 0.3);
+}
+
+.init-db-btn:hover {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(243, 156, 18, 0.4);
+}
+
+/* Убираем старые стили границ и разделителей */
+.data-table th.border-right,
+.data-table td.border-right {
+  border-right: none !important;
+}
+
+.data-table th.border-right::after,
+.data-table td.border-right::after {
+  display: none;
+}
+
+/* Убираем старые финансовые блоки */
+.data-table th:nth-child(6),
+.data-table td:nth-child(6),
+.data-table th:nth-child(n+7),
+.data-table td:nth-child(n+7),
+.data-table th:nth-child(n+7):nth-child(-n+11),
+.data-table td:nth-child(n+7):nth-child(-n+11) {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Стили для системных сообщений */
+.system-messages-container {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.system-message {
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInRight 0.3s ease-out;
+  backdrop-filter: blur(10px);
+  border-left: 4px solid;
+  max-width: 400px;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.system-message-success {
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+  border-left-color: #10b981;
+  color: #2d3748;
+}
+
+.system-message-info {
+  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+  border-left-color: #3b82f6;
+  color: #2d3748;
+}
+
+.system-message-error {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff5f5 100%);
+  border-left-color: #ef4444;
+  color: #2d3748;
+}
+
+.system-message-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.system-message-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.system-message-time {
+  font-size: 11px;
+  color: #718096;
+  opacity: 0.8;
+}
+
+.system-message-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #718096;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.system-message-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #2d3748;
+}
+
+/* Стили для столбца "Вид" */
+.type-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  min-width: 40px;
+}
+
+.type-badge-rp {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.type-badge-ip {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #7dd3fc;
+}
+
+/* Стили для фильтрации по виду */
+.type-filter-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.type-filter-buttons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.type-filter-btn {
+  padding: 4px 8px;
+  border: 1px solid #dbeafe;
+  border-radius: 4px;
+  background: white;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 30px;
+}
+
+.type-filter-btn:hover {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.type-filter-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.type-filter-clear {
+  padding: 4px 6px;
+  border: 1px solid #fecaca;
+  border-radius: 4px;
+  background: #fef2f2;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.type-filter-clear:hover {
+  background: #fecaca;
+  border-color: #ef4444;
+}
+
+.type-filter-active {
+  font-size: 11px;
+  color: #10b981;
+  font-weight: 500;
+  background: #f0fdf4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #86efac;
+}
+
+/* Стили для редактируемых ячеек */
+.editable-cell:hover {
+  background-color: #f8f9fa;
+  box-shadow: inset 0 0 0 1px #e9ecef;
+  border: 0.1px solid blue;
+}
+
+/* Убираем фон у всех редактируемых ячеек */
+.editable-cell {
+  background-color: transparent !important;
+}
+
+/* Убираем стрелочки у числовых полей ввода */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Стили для поля ввода в таблице */
+.data-table input[type="number"] {
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 4px;
+  font-size: inherit;
+  font-family: inherit;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.data-table input[type="number"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px #3b82f6;
+}
+!important
+/* Отключаем анимации для пользователей, которые их предпочитают */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 ;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Стили для таблицы баланса */
+.balance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.balance-table th {
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid #e2e8f0;
+}
+
+.balance-table td {
+  padding: 12px 10px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.balance-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Стили для итоговой строки */
+.balance-table .total-row {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
+  color: white;
+  font-weight: 700;
+  position: sticky;
+  bottom: 0;
+}
+
+.balance-table .total-row td {
+  background: transparent !important;
+  color: white !important;
+  text-align: center;
+  border: none !important;
+}
+
+/* Адаптивность для таблицы баланса */
+@media (max-width: 1200px) {
+  .balance-table {
+    font-size: 12px;
+  }
+
+  .balance-table th,
+  .balance-table td {
+    padding: 8px 6px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+}
+
